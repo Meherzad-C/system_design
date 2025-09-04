@@ -1,5 +1,34 @@
 #pragma once
 
+/*
+*       +---------------------+
+*       |      Observer       |<-- Interface
+*       | + virtual update()  |
+*       +---------------------+
+*                ^
+*                |
+*    +-------------------------+
+*    |    ConcreteObserver     |
+*    | + update()              |
+*    +-------------------------+
+*                ^
+*                |
+*                |
+*       +---------------------+
+*       |      Subject        |
+*       | - observers_ list   |
+*       | + attach()          |
+*       | + detach()          |
+*       | + notify()          |
+*       +---------------------+
+*                ^
+*                |
+*            +--------+
+*            | main() |
+*            +--------+
+*
+*/
+
 #include <vector>
 #include <memory>
 #include <algorithm>

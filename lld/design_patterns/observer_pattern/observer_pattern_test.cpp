@@ -8,6 +8,7 @@ class ConcreteObserver : public Observer {
 
  public:
   explicit ConcreteObserver(const std::string& name) : _name(name) {}
+
   void update() override {
     std::cout << "Observer [" << _name << "] " << "notified!" << std::endl;
   }
